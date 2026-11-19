@@ -1,0 +1,38 @@
+{
+  "name": "@corevelos/cli",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Command-line client for Corevelos",
+  "bin": {
+    "corevelos": "./dist/corevelos.js"
+  },
+  "files": [
+    "dist/corevelos.js",
+    "THIRD_PARTY_LICENSES.txt"
+  ],
+  "devDependencies": {
+    "@types/node": "22.19.11",
+    "@types/ws": "8.18.1",
+    "typescript": "7.0.2",
+    "ws": "8.21.3",
+    "zod": "4.6.7",
+    "@modelcontextprotocol/server": "2.3.1",
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/build.mjs",
+    "test": "npm run build && node --test",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shujaatali786/corevelos-cli.git"
+  }
+}
